@@ -13,7 +13,10 @@ public class AnimationEvent : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        if (Input.GetKeyUp(KeyCode.R))
+            animator.SetBool("Repeat", true);
+        if (Input.GetKeyUp(KeyCode.B))
+            animator.SetBool("Bounce", !animator.GetBool("Bounce"));
 	}
 
     public void Event()
